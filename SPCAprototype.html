@@ -1,0 +1,564 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+<style>
+    .navbar{
+        position: fixed;
+        display:block;
+        overflow: hidden;
+        top:0;
+        margin-bottom: 0;
+        left:0;
+        width:100vw;
+        background-color:navy;
+        height:20vmin;
+		font-family: 'Bowlby One', cursive;
+		color:white;
+		text-align:center;
+    }
+    #logo{
+        background-image:url("spcalogo.png");
+        align-content: center;
+        z-index:2;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width:40vmin;
+        height: 40vmin;
+        position:relative;
+        margin-left: auto;
+        margin-right: auto;
+ 
+    }
+	#homewrap{
+		display:block;
+	}
+    .dropbtn{
+        height:20vmin;
+        float:left;
+        width:20vmin;
+        background-color:navy;
+        border: none;
+        margin:0;
+        background-image: url("134216-48.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      height:30vmin;
+      float:left;
+      top:-5vmin;
+      background-color: lightgrey;
+      width:30vmin;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   
+    }
+    
+    #myDropDown{
+        position: relative;
+        z-index:4;
+        margin-top: -17vh;
+    }
+
+    .links{
+        padding:3.5vmin;
+        font-family: 'Cabin Condensed', sans-serif;
+    }
+    a{
+        text-decoration: none;
+    }
+   
+    .links:hover {
+        background-color: #ddd;
+    }
+    #proflink{
+        position:relative;
+        float:right;
+        z-index:2;
+        margin-top:3vmin;
+       display: inline;
+        background-image: url("userpng.png");
+        width:15vmin;
+        height:15vmin;
+        background-size:contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    #homepic{
+        position:relative;
+        width:100vmin;
+        height:35vmin;
+        background-image: url("rescuepets.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+		display:block;
+    }
+    #showmenu{
+        position:relative;
+        margin-left: auto;
+        margin-right: auto;
+        width:60vmin;
+		display:block;
+        
+
+    }
+    .showmenu{
+        font-family: 'Bowlby One', cursive;
+        text-align: center;
+        color:white;
+        width:60vmin;
+        height:5vmin;
+        background-color: navy;
+        padding: 2vmin;
+        margin:1vmin;
+		display: block;
+    }
+	#notifback{
+        float:left;
+        width:17vmin;
+        height:17vmin;
+        position:absolute;
+		top:-0.5vmin;
+        background-image:url("reply.png");
+        background-size:contain;
+        background-repeat: no-repeat;
+        z-index:3;
+        cursor: pointer;
+    }
+    #notifheader{
+        width:100vw;
+        height:20vmin;
+        position:fixed;
+        background-color:navy;
+        text-align:center;
+        color:white;
+        font-family: 'Bowlby One', cursive;
+        padding-top:5vmin;
+        z-index:2;
+    }
+
+    span{
+        float:right;
+		position:relative;
+		top:-3vmin;
+	
+    }
+	
+	#collapseicon{
+		float:right;
+		position:relative;
+		top:-5vmin;
+		left:-2vmin;
+	}
+
+	.notiflink{
+		cursor: pointer;
+		height:1vmin;
+	}
+	#notifpanel{
+		position:relative;
+		display: none;
+		top:25vmin;
+		width: 60vmin;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.notifprofink{
+		position: relative;
+		top: -16vmin;
+	}
+	
+	#profilelink{
+		cursor:pointer;
+	}
+	#profilewrap{
+		display:none;
+	}
+	#profback{
+		float:left;
+        width:17vmin;
+        height:17vmin;
+        position:absolute;
+		top:-0.5vmin;
+        background-image:url("reply.png");
+        background-size:contain;
+        background-repeat: no-repeat;
+        z-index:3;
+        cursor: pointer;
+	}
+	#userpic{
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		height:30vmin;
+		width:30vmin;
+		top:20vmin;
+		background-image: url(user.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	#profilewrap h2{
+		position:relative;
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		color:black;
+		top:20vmin;
+	}
+	#bio{
+		position:relative;
+		top:25vmin;
+		margin-left: auto;
+		margin-right: auto;
+		height:10vmin;
+		width:45vmin;
+		font-family: 'Montserrat', sans-serif;
+		background-color:lightgray;
+		color:black;
+		border: 2px solid darkorange;
+		border-radius: 10px;	
+	}
+	
+	#profheader h1{
+		padding-top: 2vmin;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 15vmin;
+	}
+	#smlinks{
+		display: block;
+		width:75vmin;
+		height:20vmin;
+		overflow:visible;
+		position:relative;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 30vmin;
+		left:6vmin;
+	}
+	#facebook{
+		width:20vmin;
+		height:20vmin;
+		background-image: url(facebook.png);
+		background-size:contain;
+		background-repeat: no-repeat;
+		display: inline-block;
+	}	
+	#twitter{
+		width:20vmin;
+		height:20vmin;
+		display: inline-block;
+		position:relative;
+		background-image: url(twitter.png);
+		background-size:contain;
+		background-repeat: no-repeat;
+		
+	
+	}	
+	#instagram{
+		width:18vmin;
+		height:18vmin;
+		position: relative;
+		display: inline-block;
+		background-image: url(instagram.png);
+		background-size:contain;
+		background-repeat: no-repeat;
+	}
+	#profdetail{
+		width:30vmin;
+		height:10vmin;
+		font-family: 'Montserrat', sans-serif;
+		position:relative;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 15vmin;
+		text-align:center;
+	}
+	#camlink{
+		cursor: pointer;
+	}
+	#camwrap{
+		display:none;
+	}
+	#camback{
+		float:left;
+        width:17vmin;
+        height:17vmin;
+        position:absolute;
+		top:-0.5vmin;
+        background-image:url("reply.png");
+        background-size:contain;
+        background-repeat:no-repeat;
+        cursor:pointer;
+	}
+	#camheader h1{
+		padding-top: 3vmin;
+		padding-left:2vmin;
+		
+	}
+	#camheader{
+		z-index:6;
+	}
+	#cam{
+		height:80vin;
+		width:40vmin;
+		position:relative;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10vmin;
+		left:-25vmin;
+	}
+	#camtext{
+		font-family:'Montserrat', sans-serif;
+		text-align: center;
+		font-size: 20pt;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30vmin;
+	}
+	#chatbox{
+		background-color: #da8001;
+		position:relative;
+		margin-right: auto;
+		margin-left: auto;
+		height: 30vmin;
+		width:70vmin;
+		left:-7vmin;
+		margin-bottom: 5vmin;
+		border-radius: 5px;
+	}
+	#textbox{
+		position:relative;
+		margin-left: auto;
+		margin-right: auto;
+		width:80vmin;
+		height:70vmin;
+		background-image: url(chatbox.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		top:-18vmin;
+		left:-5vmin;
+	}
+	#chatbox h1{
+		font-family:'Montserrat', sans-serif;
+		color:white;
+		font-weight: 100;
+		font-size:24pt;
+		text-align: center;
+	}
+    </style>
+<body>
+	<div id="homeScreen">
+    <div id="logo"></div>
+    <div class="navbar">
+		  <div id="proflink"></div>
+        <div id="homewrap" class="dropdown"><button class="dropbtn"></button>
+        </div>
+  
+    </div>
+    
+    <div id="myDropdown" class="dropdown-content">  
+		<div id="notiflink" class = "links" "notiflink">Notifications<br></div>
+        <div id = "profilelink" class="links">Profile<br></div>
+        <div id = "camlink" class="links">Kitty Cam</div>
+    </div>
+   <div id="homepic"></div>
+    <div id="showmenu">
+        <div class="showmenu">about</div>
+        <div class="showmenu">donate</div>
+        <div class="showmenu">services</div>
+        <div class="showmenu">contact</div>
+    </div>
+	</div>
+	<div id="notifwrap">
+		<div id="notifheader"><h1>Notifications</h1>
+		<div id="proflink" class="notifprofink"></div>
+		<div id="notifback"></div>
+		
+		</div>
+		<div id="notifpanel">
+			<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+					 <h4 class="panel-title">
+					<a data-toggle="collapse" href="#collapse1">Newly Admitted Animals</a>
+				  </h4>
+				<span class="badge badge-primary badge-pill">2</span>
+			</div>
+			<div id="collapse1" class="panel-collapse collapse">
+			<div class="panel-body">Dog <br>Breed: <br> Age:<span id="collapseicon" class="badge badge-primary badge-pill">view</span></div>
+				<div class="panel-footer">Cat <br>Breed: <br> Age:
+				<span id="collapseicon" class="badge badge-primary badge-pill">view</span></div>
+				  </div>
+				
+				
+					<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse2">Volunteer Opportunities</a>
+			  </h4>
+				<span class="badge badge-primary badge-pill">1</span>
+			</div>
+			<div id="collapse2" class="panel-collapse collapse">
+			  <div class="panel-body">My Furry Valentine <br> February 9th <span id="collapseicon" class="badge badge-primary badge-pill">sign up</span></div>
+			</div>  
+
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse3">Petsitting and Fostering Opportunities</a>
+			  </h4>
+				<span class="badge badge-primary badge-pill">1</span>
+			</div>
+			<div id="collapse3" class="panel-collapse collapse">
+			  <div class="panel-body">April 25th <br>Animals: <br>Location:<span id="collapseicon" class="badge badge-primary badge-pill">sign up</span></div>
+			</div>      
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse4">Donations Needed</a>
+			  </h4>
+				<span class="badge badge-primary badge-pill">2</span>
+			</div>
+			<div id="collapse4" class="panel-collapse collapse">
+			  <div class="panel-body">Dry dog food<span id="collapseicon" class="badge badge-primary badge-pill">sign up</span></div>
+			  <div class="panel-footer">Small chew toys<span id="collapseicon" class="badge badge-primary badge-pill">sign up</span></div>
+				</div>
+				</div>
+    </div>
+  </div>
+</div>
+	<div id = "profilewrap">
+		<div id="profheader" class = "navbar"><div id = "proflink"></div><div id="profback"></div><h1>My Profile</h1></div>
+		<h2>Name</h2>
+		<div id="userpic"></div>
+		<div id="bio">Bio</div>
+		<div id="smlinks">
+		<div id="facebook"></div>
+		<div id="twitter"></div>
+		<div id="instagram"></div>
+		</div>
+	<div id="profdetail">Joined XX/XX/2019</div>
+	</div>
+	<div id = "camwrap">
+	<div id = "camheader" class = "navbar"><div id = "proflink"></div><div id="camback"></div><h1>Kitty Cam</h1></div>
+		<div id="camtext">Live streaming in Kitty City at the SPCA Cincinnati</div>
+	<div id= "cam"><iframe src="https://giphy.com/embed/JQRKxN6GuhGhy" width="480" height="256" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cats-JQRKxN6GuhGhy">via GIPHY</a></p></div>
+		<div id = "chatbox">
+		<h1> Live chat</h1>
+		<div id = "textbox"></div>
+		</div>
+	</div>
+		
+	
+</body>
+<script>
+    var dropdown;
+    dropdown = document.querySelector(".dropdown");
+    dropdown.addEventListener("click", showDropDown, false);
+	
+	var camScreen;
+	camScreen = document.querySelector("#camwrap");
+	
+	var profScreen;
+	profScreen = document.querySelector("#profilewrap");
+	
+    
+    var dropContent;
+    dropContent = document.querySelector(".dropdown-content");
+     
+    function showDropDown(){
+        dropContent.style.display = "block";
+	}
+	var notifscreen;
+		notifscreen = document.querySelector("#notifwrap");
+	var homeScreen;
+		homeScreen = document.querySelector("#homeScreen");
+		
+	var NotifLink;
+		NotifLink = document.querySelector("#notiflink");
+		NotifLink.addEventListener("click", showNotif, false);
+	var notifmenu;
+		notifmenu = document.querySelector("#notifpanel");
+	
+	function showNotif(){
+		notifmenu.style.display = "block";
+		homeScreen.style.display = "none";
+		notifscreen.style.display = "block";
+		}
+	
+	var proficon;
+	proficon = document.querySelector("#proflink");
+	proficon.addEventListener("click", showProfile, false);
+	
+	function showProfile(){
+		homeScreen.style.display = "none";
+		notifscreen.style.display = "none";
+		camScreen.style.display = "none";
+		profScreen.style.display = "block";
+	}
+	
+	var notifback;
+		notifback = document.querySelector("#notifback");
+		notifback.addEventListener("click", hideNotifShowHome, false);
+	
+	function hideNotifShowHome(){
+		homeScreen.style.display = "block";
+		notifscreen.style.display = "none"; 
+	}
+	
+
+	var proflink;
+	proflink = document.querySelector("#profilelink");
+	proflink.addEventListener("click", showProf, false);
+	
+	function showProf(){
+		homeScreen.style.display = "none";
+		notifscreen.style.display = "none";
+		camScreen.style.display = "none";
+		profScreen.style.display = "block";
+	}
+	
+	
+	var profback;
+	profback = document.querySelector("#profback");
+	profback.addEventListener("click", hideProfShowHome, false);
+	
+	function hideProfShowHome(){
+		profScreen.style.display = "none";
+		homeScreen.style.display = "block";
+	}
+	var camlink;
+	camlink = document.querySelector("#camlink");
+	camlink.addEventListener("click", showCam, false);
+	
+	function showCam(){
+		homeScreen.style.display = "none";
+		notifscreen.style.display = "none";
+		camScreen.style.display = "block";
+	}
+	
+	var camback;
+	camback = document.querySelector("#camback");
+	camback.addEventListener("click", hideCamShowHome, false);
+	
+	function hideCamShowHome(){
+		camScreen.style.display = "none";
+		homeScreen.style.display = "block";
+	}
+
+</script>
+</html>
